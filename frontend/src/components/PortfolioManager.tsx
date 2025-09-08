@@ -502,35 +502,6 @@ export default function PortfolioManager({ className = '' }: PortfolioManagerPro
         </div>
       </div>
 
-      {/* Test Buttons */}
-      <div className="bg-gray-50 dark:bg-gray-700 rounded-lg p-4">
-        <h4 className="text-sm font-semibold text-gray-900 dark:text-white mb-2">
-          Debug Tools
-        </h4>
-        <div className="flex gap-2">
-          <button
-            onClick={async () => {
-              console.log('Testing basic contract call...');
-              const result = await testBasicContractCall();
-              console.log('Test result:', result);
-            }}
-            className="px-3 py-1 bg-blue-500 text-white text-xs rounded hover:bg-blue-600"
-          >
-            Test Contract Call
-          </button>
-          <button
-            onClick={async () => {
-              console.log('Testing contract connection...');
-              const result = await testContractConnection();
-              console.log('Connection test result:', result);
-            }}
-            className="px-3 py-1 bg-green-500 text-white text-xs rounded hover:bg-green-600"
-          >
-            Test Connection
-          </button>
-        </div>
-      </div>
-
       {/* Contract Info */}
       <div className="bg-gray-50 dark:bg-gray-700 rounded-lg p-4">
         <h4 className="text-sm font-semibold text-gray-900 dark:text-white mb-2">
