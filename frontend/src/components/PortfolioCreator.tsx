@@ -291,9 +291,10 @@ export default function PortfolioCreator({ onPortfolioCreated, className = '' }:
           type="number"
           min="1"
           max="50"
+          style={{ color: 'black' }}
           value={driftThreshold}
           onChange={(e) => setDriftThreshold(Number(e.target.value))}
-          className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-gray-700 dark:text-gray-100"
+          className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-gray-700 dark:text-gray-900 placeholder-gray-500 dark:placeholder-gray-400"
           placeholder="Enter drift threshold (1-50%)"
         />
         <p className="text-xs text-gray-500 dark:text-gray-400 mt-1">
@@ -324,11 +325,12 @@ export default function PortfolioCreator({ onPortfolioCreated, className = '' }:
                 <select
                   value={allocation.assetCode}
                   onChange={(e) => updateAllocation(index, 'assetCode', e.target.value)}
-                  className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-gray-600 dark:text-gray-100"
+                  style={{ color: 'black' }}
+                  className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-gray-600 dark:text-gray-900"
                 >
                   {availableAssets.map(assetCode => (
                     <option key={assetCode} value={assetCode}>
-                      {assetCode} - {STELLAR_ASSETS[assetCode as keyof typeof STELLAR_ASSETS].name}
+                      {STELLAR_ASSETS[assetCode as keyof typeof STELLAR_ASSETS].name}
                     </option>
                   ))}
                 </select>
@@ -339,9 +341,10 @@ export default function PortfolioCreator({ onPortfolioCreated, className = '' }:
                   type="number"
                   min="0"
                   max="100"
+                  style={{ color: 'black' }}
                   value={allocation.targetPercentage}
                   onChange={(e) => updateAllocation(index, 'targetPercentage', Number(e.target.value))}
-                  className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-gray-600 dark:text-gray-100"
+                  className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-gray-600 dark:text-gray-900 placeholder-gray-500 dark:placeholder-gray-400"
                   placeholder="%"
                 />
               </div>
